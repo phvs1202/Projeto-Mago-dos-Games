@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magos dos Games</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="cabecario">
+        <img src="../img/logo.png">
+        <h1>Magos dos Games</h1>
+        <img src="../img/logo.png">
+    </div>
+    <div class="adicionar">
+        <h2>Adicionar: </h2>
+    
+        <form id="adiciona_jogo">
+          <input type="text" id="nome_jogo" placeholder="Nome">
+          <input type="text" id="preco_jogo" placeholder="Preço (R$, .)" required="">
+          <button type="submit" class="botao_adicionar" id="adicionarid">Adicionar</button>
+        </form>
+    </div>
+    <div class="listagem">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="lista_jogos" class="listagem_jogos">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="../script/jogos.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+TABELA USUÁRIOS:
+CREATE TABLE IF NOT EXISTS `db_jogos`.`user` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(60) NULL DEFAULT NULL,
+  `senha` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 12
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+
+TABELA JOGOS:
+CREATE TABLE IF NOT EXISTS `db_jogos`.`jogo` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(70) NULL DEFAULT NULL,
+  `preco` FLOAT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 69
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+
+TABELA RELACIONAMENTO JOGOS-USUÁRIOS:
+CREATE TABLE IF NOT EXISTS `db_jogos`.`usergame` (
+  `usergameid` INT NOT NULL AUTO_INCREMENT,
+  `userid` INT NOT NULL,
+  `jogoid` INT NOT NULL,
+  `status` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`usergameid`),
+  INDEX `usergame_ibfk_1` (`userid` ASC) VISIBLE,
+  INDEX `usergame_ibfk_2` (`jogoid` ASC) VISIBLE,
+  CONSTRAINT `usergame_ibfk_1`
+    FOREIGN KEY (`userid`)
+    REFERENCES `db_jogos`.`user` (`id`),
+  CONSTRAINT `usergame_ibfk_2`
+    FOREIGN KEY (`jogoid`)
+    REFERENCES `db_jogos`.`jogo` (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 20
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci

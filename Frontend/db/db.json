@@ -1,0 +1,41 @@
+{
+    "jogos": [
+        {
+            "id": 1,
+            "nome": "Red Dead Redemption 2",
+            "preco": 200.90,
+            "status": "comprarei"
+        },
+        {
+            "id": 2,
+            "nome": "The Last of Us",
+            "preco": 190.90,
+            "status": "já comprei"
+        },
+        {
+            "id": 3,
+            "nome": "God of War",
+            "preco": 200.00,
+            "status":"já joguei"
+        }
+
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "email": "roblox@gmail.com",
+            "senha": "roblox"
+        },
+        {
+            "id": 2,
+            "email": "minecraft@gmail.com",
+            "senha": "minecraft"
+        },
+        {
+            "id": 3,
+            "email": "kogama@gmail.com",
+            "senha": "kogama"
+        }
+    ]
+}
+

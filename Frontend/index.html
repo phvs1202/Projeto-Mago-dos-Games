@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magos dos Games</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="cabecario">
+        <img src="./img/logo.png">
+        <h1>Magos dos Games</h1>
+        <img src="./img/logo.png">
+    </div>
+
+    <div class="container">
+        <div class="subtitulo">
+            <h2>Entre na sua conta ou crie uma</h2>
+        </div>
+        <div class="form" id="forms">
+            <input type="mail" placeholder="Email" id="email">
+            <input type="password" placeholder="Senha" id="senha">
+        </div>
+        <div class="botao_form">
+            <button onclick="CriarUser()" id="criar">Criar Conta</button>
+            <button onclick="FazerLogin()" id="entrar">Entrar</button>
+        </div>
+    </div>
+    <div class="texto_sobre">
+        <h2>Sobre...</h2>
+        <p>
+            Esse site consiste em um gerenciamento de jogos, 
+            dentro dele você poderá adicinar jogos na sua lista com os seguintes 
+            status: vou comprar, estou jogando e já joguei assim poderá gerenciar suas listas de desejos de jogos.
+        </p>
+    </div>
+    <script src="./script/forms.js"></script>
+    <script src="./script/usuarios.js"></script>
+</body>
+</html>
